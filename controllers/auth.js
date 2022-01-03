@@ -1,6 +1,6 @@
-/*const bcryptjs = require('bcryptjs');
+const bcryptjs = require('bcryptjs');
 const { response } = require('express');
-const { generateJWT } = require('../helpers/generate-JWT');
+const { generateJWT } = require('../helpers/generate-jwt');
 const User = require('../models/user');
 
 
@@ -52,4 +52,4 @@ const login = async(req, res = response) => {
 
 module.exports = {
     login
-}*/
+}
