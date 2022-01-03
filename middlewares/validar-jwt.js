@@ -1,4 +1,4 @@
-/*const { response, request } = require('express');
+const { response, request } = require('express');
 const jwt = require('jsonwebtoken');
 const User = require('../models/user');
 
@@ -34,7 +34,6 @@ const validateJWT = async(req = request, res = response, next) => {
         }
 
         req.user = user;
-
         next();
 
     } catch (error) {
@@ -50,4 +49,4 @@ const validateJWT = async(req = request, res = response, next) => {
 
 module.exports = {
     validateJWT
-}*/
+}

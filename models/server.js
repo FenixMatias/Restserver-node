@@ -8,7 +8,6 @@ class Server {
 
         this.app = express();
         this.port = process.env.PORT;
-
         this.usersPath = '/api/users';
         this.authPath = '/api/auth';
 

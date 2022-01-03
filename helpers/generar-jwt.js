@@ -15,8 +15,8 @@ const generateJWT = (uid = '') => {
             } else {
                 resolve(token);
             }
-        });
-    });
+        })
+    })
 }
 
 module.exports = {
