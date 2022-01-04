@@ -25,7 +25,7 @@
          data-logo_alignment="left">
       </div>
       <hr>
-      
+
       <button id="google_signout">
         Signout
       </button>
@@ -36,7 +36,7 @@
            //Google token: id_token
            const body = {id_token: response.credential};
 
-            fetch('http://localhost:8080/api/auth/google', {
+            fetch('http://https://restserver-node-matias-toro.herokuapp.com/api/auth/google', {
               method: 'POST',
               headers: {
                 'Content-Type': 'application/json'
