@@ -1,9 +1,8 @@
-const Rol = require('../models/role');
-const User = require('../models/user');
+const { User, Category, Role, Product} = require('../models');
 
 const esRoleValido = async(role = '') => {
-    const existRol = await Rol.findOne({ role });
-    if( !existRol ) {
+    const existRole = await Role.findOne({ role });
+    if( !existRole ) {
        throw new Error(`El rol ${ role } no esta definido en la BD`)
     }
 }
@@ -24,8 +23,26 @@ const esIdExiste = async(id = '') => {
     }
 }
 
+const existsCategory = async( id ) => {
+    //Verificar si existe la categoria por id
+    const existCategory = await Category.findById(id);
+    if (!existCategory) {
+        throw new Error(`El ID ${ id }, no existe`)
+    }
+}
+
+const existsProduct = async( id ) => {
+    //Verificar si existe el producto por id
+    const existProduct = await Product.findById(id);
+    if (!existProduct) {
+        throw new Error(`El ID ${ id }, no existe`)
+    }
+}
+
 module.exports = {
     esRoleValido,
     esEmailExiste,
-    esIdExiste
+    esIdExiste,
+    existsCategory,
+    existsProduct
 }
